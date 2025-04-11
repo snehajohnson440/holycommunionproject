@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Login Screen</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+	  font-weight:100;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+     a.login-link {
+      flex: 1;
+	  text-decoration: none;
+	  color: white;
+	  height: 100vh;
+	  display: block;
+    }
+
+    .login-box {
+       height: 100%;
+	   position: relative;
+	   background-color: #111;
+	   color: white;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	   overflow: hidden;
+	   transition: 0.4s ease-in-out;
+    }
+
+    .login-box span {
+      z-index: 2;
+      font-size: 2rem;
+      text-align: center;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+
+    .login-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      z-index: 1;
+    }
+
+    .login-box.teacher:hover::before {
+      background-image:url('https://i.pinimg.com/236x/d9/cd/88/d9cd8888ce8039cf3e0b5e3439b081e3.jpg');
+      opacity: 0.5;
+    }
+
+    .login-box.student:hover::before {
+      background-image:url('https://i.pinimg.com/236x/d9/cd/88/d9cd8888ce8039cf3e0b5e3439b081e3.jpg');
+      opacity: 0.5;
+    }
+
+    .login-box:hover span {
+      font-weight:100;
+    }
+    a {
+	  text-decoration: none;
+	  color: white;
+
+	}
+    a:hover{
+    text-decoration : none;
+    color : white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a class="login-link" href="holycommunionteacherlogin.html">
+    <div class="login-box teacher">
+      <span>LOGIN<br> AS<br>TEACHER</span>
+    </div>
+    </a>
+    <a class="login-link" href="holycommunionstudentlogin.html">
+    <div class="login-box student">
+      <span>LOGIN<br> AS<br>STUDENT</span>
+    </div>
+     </a>
+  </div>
+
+</body>
+</html>

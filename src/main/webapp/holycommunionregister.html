@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Communion 2025 - Login</title>
+     <script>
+    function checkTypes(event) {
+      var password = document.getElementsByName("studentPassword")[0].value;
+      var confirmPassword = document.getElementsByName("confirmPassword")[0].value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords don't match.");
+        event.preventDefault(); // Prevent form from submitting
+        return false;
+      }
+      return true;
+    }
+  </script>
+    <style>
+        /* General Page Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/2/22/The-Last-Supper-Restored-Da-Vinci_32x16.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        /* Title outside the box */
+        .title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			font-family: 'Andika New Basic', sans-serif;
+        }
+
+        /* Transparent Login Box */
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+           /* Form Labels */
+        .input-label {
+            text-align: left;
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        /* Underlined Input Fields */
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.53);
+            background: transparent;
+            font-size: 16px;
+            outline: none;
+			font-family:Roboto;
+        }
+
+        /* Buttons */
+        .login-btn {
+            background-color: #8b8000;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: #6e6400;
+        }
+
+        /* Links */
+        .forgot-password, .register-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+			
+        }
+		a.forgot-password:hover,
+        a.register-link:hover {
+         color: blue;
+		 text-decoration: none;
+        }
+
+        .forgot-password:hover, .register-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Title outside the box -->
+    <div class="title">HOLY COMMUNION 2025</div>
+
+    <!-- Login Box -->
+    <div class="login-container">
+        <h3>REGISTER</h3>
+        <form action="studentregister.jsp" method="post" onsubmit="return checkTypes(event);">
+            <input type="text" class="input-field" placeholder="Enter Your Kid's Name" name="studentName" required>
+			<br><br>
+            <input type="password" class="input-field" placeholder="Password" name="studentPassword" required>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="password" class="input-field" placeholder="Confirm Password" name="confirmPassword" required>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br>
+            <button type="submit" class="login-btn">LOG IN</button>
+        </form>
+    </div>
+
+</body>
+</html>
