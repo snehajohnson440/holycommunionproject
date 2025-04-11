@@ -288,7 +288,7 @@ String name = request.getParameter("teachername");
 %>
   
         <div class="header">Hello <%=name%></div>
-        <button class="logout-btn" >Log Out</button>
+        <a href="holycommunionteacherlogin.html" class="logout-btn" style="text-decoration:none;">Log Out</a>
     </div>
 	<div class="quote-on-image">
       "Not many of you should become teachers, my brothers, for you know that we who teach will be judged with greater strictness."
